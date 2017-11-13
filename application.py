@@ -1,11 +1,12 @@
 from flask import Flask
+from flask import render_template
 
 application = app = Flask(__name__)
 
 
 @app.route('/')
 def main():
-    return "This is the main page."
+    return render_template('base.html')
 
 
 @app.route('/search_result')
