@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Base page for all other pages</title>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/background_style.css')}}">
-        <style>
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #89b368;
-                position: fixed;
-                top: 100px;
-                width: 100%;
-            }
-            li {
-                float: left;
+<head>
+    <meta charset="UTF-8">
+    <title>Base page for all other pages</title>
 
-            }
-            a {
-                display: block;
-                width: 150px;
-                color: black;
-                text-align: center;
-                padding: 18px 18px;
-                text-decoration: none;
-            }
-            a:hover,a:active{
-                background-color: #22a422;
-                color: black;
-            }
-        </style>
-    </head>
-    <body>
+    <!-- navigation style block-->
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/background_style.css')}}">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /*overflow: hidden;*/
+            background-color: #89b368;
+            /*position: fixed;*/
+            /*top: 110px;*/
+            /*width: 100%;*/
+            height: 50px;
+        }
 
-    <div id="container" style="width: 100%">
-        <div id="logo" style="width: 24%; height: 100px; background-color: aquamarine; float: left; position: fixed">
-            <img src={{url_for("static",filename="assets/img/logo.png")}} alt="Portrait" width="100%" height="100%">
+        li {
+            float: left;
+            height:30px;
+        }
+
+        a {
+            height: 30px;
+            display: block;
+            /*width: 150px;*/
+            color: black;
+            text-align: center;
+            /*padding: 18px 18px;*/
+            text-decoration: none;
+        }
+
+        /*a:hover, a:active {*/
+        /*background-color: #22a422;*/
+        /*color: black;*/
+        /*}*/
+    </style>
+    {% endblock %}
+</head>
+<body>
+<div id="container">
+    <!-- navigation block-->
+    <header style="position: fixed;width: 100%;height: 150px;top: 10px;left: 0px;">
+        {% block navcontent %}
+        <div style="height: 100px;">
+            <div id="logo" style="float:left;">
+                <img src={{url_for("static",filename="assets/img/logo.png")}} alt="Portrait" height="100px">
+            </div>
+            <div id="search" style="height: 100px;">
+                <form style="padding-top: 20px;padding-left: 330px;">
+                    <input type="text" name="species_name_search" style="font-size: xx-large;vertical-align: middle;"/>
+                    <input type="submit" name="submit" value="search species" style="font-size: xx-large"/>
+                </form>
+            </div>
         </div>
-        <div id="search" style="width: 70%; height: 100px; position: fixed; left: 25%">
-            <form>
-                <input type="text" name="species_name_search" style="font-size: 18px; width: 40%; height: 40px; margin-top: 25px; margin-left: 10px"/>
-                <input type="submit" name="submit" value="search species" style="font-size:100px; width: 15%; height: 40px"/>
-            </form>
-        </div>
-        <div id="navigation">
+
+        <div id="navigation" style="position: relative;">
             <ul>
-                <li><a href="#home">Home</a> </li>
-                <li><a href="#all_classification">All Classification</a> </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#all_classification">All Classification</a></li>
 
             </ul>
         </div>
+        {% endblock %}
+    </header>
+
+    <div id="test" style="margin-top: 200px;">
+        {% block others %}
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        {% endblock %}
     </div>
 
-    
-    </body>
+</div>
+
+</body>
 </html>
