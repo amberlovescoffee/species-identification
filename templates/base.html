@@ -8,30 +8,38 @@
     {% block styles %}
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/background_style.css')}}">
     <style>
+        *{
+            /*border: 0px solid;*/
+            margin: 0 0;
+            padding: 0 0;
+        }
+        header{
+            background-color: ivory;
+        }
         ul {
             list-style-type: none;
-            margin: 0;
+            /*margin: 0;*/
             padding: 0;
-            /*overflow: hidden;*/
+            overflow: hidden;
             background-color: #89b368;
             /*position: fixed;*/
             /*top: 110px;*/
-            /*width: 100%;*/
-            height: 50px;
+            width: 100%;
+            /*height: 50px;*/
         }
 
         li {
             float: left;
-            height: 30px;
+            /*height: 30px;*/
         }
 
-        a {
-            height: 30px;
+        li a {
+            /*height: 50px;*/
             display: block;
-            /*width: 150px;*/
+            width: 150px;
             color: black;
             text-align: center;
-            /*padding: 18px 18px;*/
+            padding: 18px 18px;
             text-decoration: none;
         }
 
@@ -45,32 +53,63 @@
 <body>
 <div id="container">
     <!-- navigation block-->
-    <header style="position: fixed;width: 100%;height: 150px;top: 10px;left: 0px;">
+    <header style="position: fixed;width: 100%;height: 150px;top: 0px;left: 0px;">
         {% block navcontent %}
-        <div style="height: 100px;">
-            <div id="logo" style="float:left;">
-                <img src={{url_for("static",filename="assets/img/logo.png")}} alt="Portrait" height="100px">
+        <!--<div style="height: 100px;">-->
+            <div id="logo" style="float:left;height: 100px;">
+                <img src={{url_for("static",filename="assets/img/logo_small.png")}} alt="Portrait">
             </div>
-            <div id="search" style="height: 100px;">
+            <div id="search" style="">
                 <form style="padding-top: 20px;padding-left: 330px;">
                     <input type="text" name="species_name_search" style="font-size: xx-large;vertical-align: middle;"/>
-                    <input type="submit" name="submit" value="search species" style="font-size: xx-large"/>
+                    <input type="button" name="submit" value="search species" style="font-size: xx-large;"/>
                 </form>
             </div>
-        </div>
+        <!--</div>-->
 
-        <div id="navigation" style="position: relative;">
+        <!--<div id="navigation" style="background-color: red">-->
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#all_classification">All Classification</a></li>
 
             </ul>
-        </div>
+        <!--</div>-->
         {% endblock %}
     </header>
 
-    <div id="test" style="margin-top: 200px;">
+    <div id="test" style="margin-top: 200px;overflow-y: hidden">
         {% block others %}
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
         <p>test</p>
         <p>test</p>
         <p>test</p>
