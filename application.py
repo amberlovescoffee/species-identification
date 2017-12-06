@@ -16,9 +16,9 @@ def main():
     return render_template('main.html')
 
 
-@app.route('/search_result')
-def search_result():
-    return "This is the search result page."
+@app.route('/search_results')
+def search_results():
+    return render_template('search_results.html')
 
 
 @app.route('/species')
